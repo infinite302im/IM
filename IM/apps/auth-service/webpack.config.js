@@ -3,7 +3,10 @@ const { join } = require('path');
 
 module.exports = {
   output: {
-    path: join(__dirname, 'out-tsc/auth-service'),
+    path: join(__dirname, 'dist'),
+    ...(process.env.NODE_ENV !== 'production' && {
+          devtoolModuleFilenameTemplate: '[absolute-resource-path]',
+        }),
   },
   plugins: [
     new NxAppWebpackPlugin({

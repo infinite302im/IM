@@ -4,9 +4,6 @@ const { join } = require('path');
 module.exports = {
   output: {
     path: join(__dirname, 'dist'),
-    ...(process.env.NODE_ENV !== 'production' && {
-          devtoolModuleFilenameTemplate: '[absolute-resource-path]',
-        }),
   },
   plugins: [
     new NxAppWebpackPlugin({

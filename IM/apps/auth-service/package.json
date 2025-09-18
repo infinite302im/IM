@@ -1,14 +1,14 @@
 {
-  "name": "@./auth-service",
-  "version": "0.0.1",
+  "name": "@im/auth-service",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "node src/main.ts"
   },
   "nx": {
-    "name": "auth-service",
+    "name": "@im/auth-service",
     "projectType": "application",
-    "sourceRoot": "auth-service/src",
+    "sourceRoot": "@im/auth-service/src",
     "targets": {
       "serve": {
         "executor": "@nx/js:node",
@@ -18,10 +18,10 @@
         ],
         "configurations": {
           "development": {
-            "buildTarget": "auth-service:build:development"
+            "buildTarget": "@im/auth-service:build:development"
           },
           "production": {
-            "buildTarget": "auth-service:build:production"
+            "buildTarget": "@im/auth-service:build:production"
           }
         }
       },

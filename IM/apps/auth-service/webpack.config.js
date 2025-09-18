@@ -8,7 +8,7 @@ module.exports = {
   },
   resolve : {
     alias: {
-      "@packages": path.resolve(__dirname, "../../packages"),
+      "@packages": resolve(__dirname, "../../packages"),
     },
     extensions: [".ts", ".js", '.tsx'],
   },

@@ -54,7 +54,7 @@
     "jest-environment-node": "^30.0.2",
     "jest-util": "^30.0.2",
     "npm": "^11.6.0",
-    "nx": "21.5.2",
+    "nx": "^21.5.3",
     "prettier": "^2.6.2",
     "prisma": "^6.16.2",
     "react-refresh": "^0.10.0",

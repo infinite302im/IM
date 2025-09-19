@@ -6,6 +6,8 @@ import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 import axios from 'axios';
 import cookieParser from 'cookie-parser';
+const { ipKeyGenerator } = require('express-rate-limit');
+
 
 
 const app = express();
@@ -29,7 +31,7 @@ const limiter = rateLimit({
   message:{error: "Too many requests, please try again later"},
   standardHeaders: true,
   legacyHeaders: true,
-  keyGenerator: (req:any) => req.ip,
+  keyGenerator: (req) => ipKeyGenerator(req.ip),
 });
 
 app.use(limiter);
